@@ -27,7 +27,7 @@ perday <- tapply(data$steps, data$factor_date, sum, na.rm = TRUE)
 hist(perday, main = "Histogram of steps per day", xlab = "Steps per day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![plot of chunk unnamed-chunk-44](figure/unnamed-chunk-44-1.png)
 
 The mean of total steps per day is **9354.2295082**, and the median is **10395**.
 
@@ -40,7 +40,7 @@ perinterval <- tapply(data$steps, data$factor_interval, mean, na.rm = TRUE)
 plot(names(perinterval), perinterval, type = "l", main = "Average of steps per interval across all days", xlab="Interval", ylab="Mean")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![plot of chunk unnamed-chunk-45](figure/unnamed-chunk-45-1.png)
 
 The maximum average of steps is **206.1698113**, and occurs on index **104**, which corresponds to interval **835**.
 
@@ -59,7 +59,7 @@ new_perday <- tapply(new_data$steps, new_data$factor_date, sum, na.rm = TRUE)
 hist(new_perday, main = "Histogram of steps per day", xlab = "Steps per day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![plot of chunk unnamed-chunk-46](figure/unnamed-chunk-46-1.png)
 
 The mean of total steps per day is **10766.19**, and the median is **10766.19**. After imputing the missing values, the data distribution changed, reducing the days with counts between 0 and 5000, and increasing the ones between 10000 and 15000. Additionally, the mean and median became equal. 
 
@@ -83,7 +83,7 @@ perinterval_weekend <- tapply(data_weekend$steps, data_weekend$factor_interval, 
 plot(names(perinterval_weekend), perinterval_weekend, type = "l", main="Weekend", xlab="Interval", ylab="Mean")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![plot of chunk unnamed-chunk-47](figure/unnamed-chunk-47-1.png)
 
 The plots show that the active time of the subject start later on weekends.
 
